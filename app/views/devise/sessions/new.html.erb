@@ -1,0 +1,23 @@
+<div role="form" class="col-lg-3 col-md-3 col-sm-3">
+<fieldset>
+<legend>Log in</legend>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group"><%= f.label :username %>
+  <%= f.text_field :username, autofocus: true, class: 'form-control' %>
+</div>
+
+  <div class="form-group"><%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="form-group"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end %>
+
+  <div class="form-group"><%= f.submit "Log in" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</fieldset>
+</div>
