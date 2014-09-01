@@ -1,1 +1,28 @@
 @import "bootstrap";
+
+.promo {
+  height: 35em;
+  width: 100%;
+  background-image: url('exhibition.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  margin-top: -5em;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.navbar {
+  margin: 0 0 5em 0;
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar-brand {
+  margin-right: 3em;
+}
