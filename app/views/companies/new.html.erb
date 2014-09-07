@@ -1,0 +1,36 @@
+<div class="form7">
+<div role="form" class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-4">
+<legend>Company profile</legend>
+<fieldset>
+<%= form_for [@user, @company] do |f| %>
+ <%#= render 'shared/messages', object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :about %>
+    <%= f.text_area :about, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :profile %> 
+    <%= f.text_field :profile, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :customers_profile %>
+    <%= f.text_field :customers_profile, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Create company profile", class: 'btn btn-md btn-primary' %>
+  </div>
+
+<% end %>
+
+</fieldset>
+</div>
+</div>
