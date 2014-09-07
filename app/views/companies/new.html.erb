@@ -3,7 +3,7 @@
 <legend>Company profile</legend>
 <fieldset>
 <%= form_for [@user, @company] do |f| %>
- <%#= render 'shared/messages', object: f.object %>
+ <%= render 'shared/error_messages', object: f.object %>
 
   <div class="form-group">
     <%= f.label :name %>

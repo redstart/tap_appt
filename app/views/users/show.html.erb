@@ -1,2 +1,28 @@
+<div class="col-lg-offset-1 col-lg-10">
 
-<h3><%= current_user.username %></h3>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#user" role="tab" data-toggle="tab">User settings</a></li>
+  <li><a href="#company" role="tab" data-toggle="tab">Company details</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="user">
+    <ul>
+      <li><%= current_user.username %></li>
+      <li><%= current_user.email %></li>
+      <li><%= link_to 'Update user settings', edit_user_registration_path, class: 'btn btn-md btn-primary' %></li>
+    </ul>
+  </div>
+  <div class="tab-pane" id="company">
+    <ul>
+      <li><%= current_user.company.name %></li>
+      <li><%= current_user.company.about %></li>
+      <li><%= current_user.company.profile %></li>
+      <li><%= current_user.company.customers_profile %></li>
+      <li><%= link_to 'Update company settings', edit_user_company_path(@user, @company), class: 'btn btn-md btn-primary' %></li>
+    <ul>
+  </div>
+</div>
+</div>

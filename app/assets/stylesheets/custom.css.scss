@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+ul li {
+  list-style-type: none;
+}
+
 .navbar {
   margin: 0 0 0 0;
   -webkit-border-radius: 0 !important;
@@ -78,4 +82,12 @@
 .btn-primary:hover {
   background-color: #1874CD;
   color: #fff; 
+}
+
+.nav-tabs {
+  margin: 2em 0 0 0;
+}
+
+.tab-content {
+  padding: 1em;
 }
